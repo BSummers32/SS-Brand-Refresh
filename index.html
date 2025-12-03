@@ -24,10 +24,12 @@
     <!-- NAVIGATION BAR -->
     <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-all duration-300">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Brand Logo Area -->
             <div class="h-10 flex items-center gap-2">
                 <img src="SS Logo Horizontal With Tag.jpg" alt="Shoot Smart Logo" class="h-full object-contain">
             </div>
             
+            <!-- Menu Links -->
             <div class="hidden lg:flex space-x-8 font-medium text-sm tracking-widest uppercase text-navy">
                 <a href="#vision" class="hover:text-red transition-colors">Vision</a>
                 <a href="#signage" class="hover:text-red transition-colors">Signage</a>
@@ -35,6 +37,7 @@
                 <a href="#email" class="hover:text-red transition-colors">Email</a>
             </div>
             
+            <!-- CTA -->
             <a href="https://github.com" target="_blank" class="gloss-surface bg-navy text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest shadow-md hover:scale-105 transition-all">
                 Access Assets
             </a>
@@ -80,20 +83,19 @@
             </div>
         </div>
 
-        <!-- TRANSITION 1: THE PRECISION CHEVRON -->
+        <!-- TRANSITION 1: THE PRECISION CHEVRON (STEEPER) -->
         <!-- Bridges Hero -> Signage -->
-        <div class="absolute bottom-0 left-0 w-full h-24 z-0 pointer-events-none">
-            <!-- Left Wing (8px) -->
-            <div class="absolute bottom-0 left-0 w-[55%] h-[8px] bg-navy transform rotate-1 origin-bottom-right shadow-sm"></div>
-            <!-- Right Wing (8px) -->
-            <div class="absolute bottom-0 right-0 w-[55%] h-[8px] bg-navy transform -rotate-1 origin-bottom-left shadow-sm"></div>
+        <div class="absolute bottom-0 left-0 w-full h-32 z-0 pointer-events-none">
+            <!-- Left Wing (Steeper Angle: rotate-3) -->
+            <div class="absolute bottom-0 left-0 w-[55%] h-[12px] bg-navy transform rotate-3 origin-bottom-right shadow-sm"></div>
+            <!-- Right Wing (Steeper Angle: -rotate-3) -->
+            <div class="absolute bottom-0 right-0 w-[55%] h-[12px] bg-navy transform -rotate-3 origin-bottom-left shadow-sm"></div>
             <!-- Red Accent -->
-            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[10%] h-[4px] bg-red rounded-full shadow-sm"></div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[10%] h-[6px] bg-red rounded-full shadow-sm"></div>
         </div>
     </header>
 
     <!-- SECTION: SIGNAGE -->
-    <!-- TRANSITION 2: THE STRUCTURAL SPINE integrated here -->
     <section id="signage" class="py-24 bg-gray-50 relative overflow-hidden">
         
         <!-- The Structural Spine -->
@@ -110,7 +112,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <!-- FLYER 1: Visual Rhythm -->
+                <!-- FLYER 1 -->
                 <div class="aspect-paper shadow-flyer bg-white flex flex-col group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
                     <div class="bg-navy p-6 pb-10 relative clip-angle-bottom text-center">
                         <h2 class="font-heading text-2xl font-bold text-white leading-none">VISUAL<br><span class="text-red">RHYTHM</span></h2>
@@ -143,7 +145,7 @@
                     </div>
                 </div>
 
-                <!-- FLYER 2: Brand Authority -->
+                <!-- FLYER 2 -->
                 <div class="aspect-paper shadow-flyer flex flex-col border-b-8 border-navy bg-white group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
                     <div class="bg-navy h-1/3 flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
                         <div class="absolute inset-0 opacity-10 pattern-overlay"></div>
@@ -163,7 +165,7 @@
                     <div class="h-24 relative bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold uppercase tracking-widest border-t border-gray-300">Lifestyle Imagery Placeholder</div>
                 </div>
 
-                <!-- FLYER 3: Kinetic Angles -->
+                <!-- FLYER 3 -->
                 <div class="aspect-paper shadow-flyer flex flex-col bg-white group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
                     <div class="h-1/3 relative clip-angle-bottom bg-navy flex items-center justify-center">
                          <div class="absolute inset-0 bg-gradient-to-tr from-navy to-blue-900"></div>
@@ -191,17 +193,22 @@
     </section>
 
     <!-- SECTION: SOCIAL MEDIA -->
-    <!-- TRANSITION 3: THE ORBITAL RINGS integrated here -->
-    <section id="social" class="py-24 bg-white relative overflow-hidden">
+    <!-- TRANSITION 3: GRAY BRIDGE WITH ACCENTS -->
+    <section id="social" class="py-24 bg-white relative overflow-visible">
         
-        <!-- THE ORBITAL RINGS BRIDGE -->
-        <!-- Large offset rings bridging from the section above/below -->
-        <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] border-[20px] border-navy/5 rounded-full z-0 pointer-events-none"></div>
-        <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] border-[2px] border-red/10 rounded-full z-0 pointer-events-none border-dashed"></div>
+        <!-- THE GRAY BRIDGE: Top Overlay -->
+        <div class="absolute top-[-5%] left-0 w-full h-[120%] bg-gray-100 -skew-y-3 z-0 origin-top-left transform translate-y-12 shadow-inner border-t border-gray-200"></div>
         
+        <!-- ACCENTS: Navy & Red Lines -->
+        <!-- Navy Line running parallel to the top skew -->
+        <div class="absolute top-[5%] left-0 w-2/3 h-2 bg-navy/10 -skew-y-3 z-0"></div>
+        <!-- Red Line accent at the bottom -->
+        <div class="absolute bottom-[10%] right-0 w-1/3 h-2 bg-red/10 -skew-y-3 z-0"></div>
+
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div class="mb-4 md:mb-0">
+                    <!-- Changed text to Navy for visibility on Gray -->
                     <h2 class="font-heading text-4xl font-bold text-navy">Social Feed Strategy</h2>
                     <p class="text-gray-600 mt-2 text-lg max-w-lg font-medium">
                         Using depth, texture, and motion to stop the scroll.
@@ -260,17 +267,88 @@
         </div>
     </section>
 
-    <!-- SECTION: EMAIL (TACTICAL BENTO) -->
-    <!-- TRANSITION 4: THE TACTICAL BENTO integrated layout -->
-    <section id="email" class="py-24 bg-gray-50 relative border-t border-gray-200">
+    <!-- SECTION: EMAIL (RESTORED GRID) -->
+    <section id="email" class="py-24 bg-gray-50 relative border-t-8 border-navy">
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="font-heading text-4xl font-bold text-navy">Mission Control: Email</h2>
-                <p class="text-gray-700 mt-2 text-lg font-medium">Organizing communication into clear, tactical modules.</p>
+                <h2 class="font-heading text-4xl font-bold text-navy">Email UX/UI</h2>
+                <p class="text-gray-700 mt-2 text-lg font-medium">Applying the brand system to the inbox.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- EMAIL 1: Blog Format -->
+                <div class="bg-white shadow-flyer overflow-hidden h-full flex flex-col border border-gray-200 rounded-md group hover:-translate-y-1 transition-transform">
+                    <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                        <span class="text-navy font-heading font-bold text-xs tracking-widest">SHOOT SMART</span>
+                        <span class="text-xs text-gray-500 font-bold uppercase">BLOG FORMAT</span>
+                    </div>
+                    <div class="h-48 bg-gray-100 flex items-center justify-center text-gray-300 border-b border-gray-100">
+                        <i class="ph-fill ph-article text-5xl"></i>
+                    </div>
+                    <div class="p-8 flex-1">
+                        <span class="text-red font-bold text-xs uppercase tracking-widest mb-2 block">Typography Study</span>
+                        <h1 class="font-heading text-xl font-bold text-navy mb-4 leading-tight">Why We Chose Montserrat for Long-Form Text</h1>
+                        <p class="font-body text-gray-700 text-sm leading-relaxed mb-6 font-medium">
+                            Notice how easy this paragraph is to read? That's Montserrat. Its geometric openness prevents eye fatigue during longer reads.
+                        </p>
+                        <a href="#" class="text-navy font-bold text-sm underline hover:text-red transition-colors">Read Case Study</a>
+                    </div>
+                </div>
+
+                <!-- EMAIL 2: Catalogue Grid -->
+                <div class="bg-white shadow-flyer overflow-hidden border-t-4 border-red h-full flex flex-col border-x border-b border-gray-200 rounded-md group hover:-translate-y-1 transition-transform">
+                    <div class="bg-navy p-8 text-center relative overflow-hidden">
+                        <div class="absolute inset-0 pattern-overlay opacity-20"></div>
+                        <span class="bg-white text-navy px-3 py-1 text-[10px] font-bold uppercase rounded-sm relative z-10 mb-3 inline-block shadow-sm">The "CTA" Button</span>
+                        <h2 class="font-heading text-white text-2xl font-bold relative z-10 mb-2">Action Color</h2>
+                        <div class="relative z-10 text-white/90 text-sm mt-2 leading-tight font-medium">
+                            We reserve the brightest red (#B5343B) for the primary call-to-action.
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50 grid grid-cols-2 gap-4 flex-1">
+                        <div class="bg-white p-4 rounded border border-gray-200 text-center flex flex-col justify-center shadow-sm">
+                            <p class="font-bold text-navy text-sm mb-1">Grid Layout</p>
+                            <p class="text-xs text-gray-600 font-bold">Organizes Chaos</p>
+                        </div>
+                        <div class="bg-white p-4 rounded border border-gray-200 text-center flex flex-col justify-center shadow-sm">
+                            <p class="font-bold text-navy text-sm mb-1">White Space</p>
+                            <p class="text-xs text-gray-600 font-bold">Isolates Products</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMAIL 3: Premium Inversion -->
+                <div class="bg-navy shadow-flyer overflow-hidden h-full flex flex-col border border-navy rounded-md group hover:-translate-y-1 transition-transform">
+                    <div class="p-8 text-center relative">
+                        <i class="ph-duotone ph-crown text-4xl text-white/90 mb-3"></i>
+                        <h2 class="font-heading font-black text-2xl text-white leading-none mb-1">PREMIUM<br><span class="text-red">INVERSION</span></h2>
+                    </div>
+                    <div class="bg-white relative p-8 pt-8 flex-1">
+                        <div class="absolute top-[-20px] left-0 w-full h-[30px] bg-white" style="clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);"></div>
+                        <h3 class="font-heading font-bold text-navy text-lg mb-3 text-center">Dark Mode Luxury.</h3>
+                        <p class="text-sm text-gray-700 text-center mb-8 leading-relaxed font-medium">
+                            For premium tiers (Patriot Membership), we invert the color scheme. A Navy dominant background signifies exclusivity.
+                        </p>
+                        <div class="block w-full bg-red text-white font-bold py-4 text-center text-sm uppercase shadow-lg rounded hover:bg-red-700 transition-colors cursor-pointer gloss-surface">
+                            Upgrade Visuals
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SYSTEM ARCHITECTURE (BENTO) -->
+    <section id="system" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-bold text-navy">System Architecture</h2>
+                <p class="text-gray-700 mt-2 text-lg font-medium">Mission Control: Organizing complex data into digestible modules.</p>
             </div>
 
             <!-- THE TACTICAL BENTO GRID -->
-            <!-- Desktop: 4 columns, 2 rows. Mobile: Flex stack -->
             <div class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-6 h-auto lg:h-[500px]">
                 
                 <!-- 1. NEWSLETTER (Large Primary Block) - Spans 2x2 -->
