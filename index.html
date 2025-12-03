@@ -52,8 +52,8 @@
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
                 <source src="ss-full-promo-vid.mp4" type="video/mp4">
             </video>
-            <!-- White Gradient Overlay: Ensures text readability on the left while showing video on the right -->
-            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40"></div>
+            <!-- White Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
@@ -209,15 +209,12 @@
         <div class="absolute top-[-5%] left-0 w-full h-[120%] bg-gray-100 -skew-y-3 z-0 origin-top-left transform translate-y-12 shadow-inner border-t border-gray-200"></div>
         
         <!-- ACCENTS: Navy & Red Lines -->
-        <!-- Navy Line running parallel to the top skew -->
         <div class="absolute top-[5%] left-0 w-2/3 h-2 bg-navy/10 -skew-y-3 z-0"></div>
-        <!-- Red Line accent at the bottom -->
         <div class="absolute bottom-[10%] right-0 w-1/3 h-2 bg-red/10 -skew-y-3 z-0"></div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div class="mb-4 md:mb-0">
-                    <!-- Changed text to Navy for visibility on Gray -->
                     <h2 class="font-heading text-4xl font-bold text-navy">Social Feed Strategy</h2>
                     <p class="text-gray-600 mt-2 text-lg max-w-lg font-medium">
                         Using depth, texture, and motion to stop the scroll.
@@ -255,15 +252,20 @@
                 <!-- CONCEPT 3: THE RED ZONE (AMMO DROP) -->
                 <div class="aspect-square bg-gray-900 relative rounded-xl overflow-hidden shadow-flyer group cursor-pointer border-4 border-white transform hover:-translate-y-2 transition-duration-300">
                     
-                    <!-- REPLACED IMAGE WITH VIDEO LOOP -->
-                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
-                        <source src="ammo-loop.mp4" type="video/mp4">
-                        <!-- Fallback image if video fails to load -->
+                    <!-- BACKGROUND VIDEO -->
+                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 z-0">
+                        <source src="ammo-falling.mp4" type="video/mp4">
                         <img src="Blazer 9mm Ammo.jpg" class="w-full h-full object-cover" alt="Ammo Background">
                     </video>
                     
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80 z-10"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-between relative z-10">
+                    
+                    <!-- RESTORED RED BANNER (Above video, below text) -->
+                    <!-- Changed width/position to ensure it's visible behind the text -->
+                    <div class="absolute top-0 right-[-10%] w-[80%] h-full bg-red transform -skew-x-12 z-10 border-l-4 border-white/20 origin-top shadow-2xl"></div>
+
+                    <!-- TEXT CONTENT (z-20 to sit on top of banner) -->
+                    <div class="absolute inset-0 p-6 flex flex-col justify-between relative z-20">
                         <div class="self-end text-right mt-4 mr-2">
                             <span class="bg-white text-red px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-2 inline-block">Flash Sale</span>
                             <h2 class="font-display font-bold text-6xl text-white leading-[0.8]">AMMO<br>DROP</h2>
