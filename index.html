@@ -260,22 +260,25 @@
                     
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80 z-10"></div>
                     
-                    <!-- RESTORED RED BANNER (Above video, below text) -->
-                    <!-- Changed width/position to ensure it's visible behind the text -->
-                    <div class="absolute top-0 right-[-10%] w-[80%] h-full bg-red transform -skew-x-12 z-10 border-l-4 border-white/20 origin-top shadow-2xl"></div>
+                    <!-- PRICE SLASH BANNER (Diagonal TR to BL) -->
+                    <!-- Rotated 45 degrees, centered, creating a sash across the image -->
+                    <div class="absolute top-1/2 left-1/2 w-32 h-[200%] bg-red transform -translate-x-1/2 -translate-y-1/2 rotate-[45deg] border-x-4 border-white/20 shadow-2xl z-10"></div>
 
-                    <!-- TEXT CONTENT (z-20 to sit on top of banner) -->
-                    <div class="absolute inset-0 p-6 flex flex-col justify-between relative z-20">
-                        <div class="self-end text-right mt-4 mr-2">
-                            <span class="bg-white text-red px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-2 inline-block">Flash Sale</span>
-                            <h2 class="font-display font-bold text-6xl text-white leading-[0.8]">AMMO<br>DROP</h2>
+                    <!-- TEXT CONTENT -->
+                    <div class="absolute inset-0 p-6 z-20">
+                        <!-- Top Right Text (Aligned with the top of the slash) -->
+                        <div class="absolute top-8 right-4 text-right transform rotate-[0deg]">
+                            <span class="bg-white text-red px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-1 inline-block shadow-sm">Flash Sale</span>
+                            <h2 class="font-display font-bold text-5xl text-white leading-[0.85] drop-shadow-md">AMMO<br>DROP</h2>
                         </div>
-                        <div class="self-start mt-auto">
+                        
+                        <!-- Bottom Left Content (Aligned with bottom of slash) -->
+                        <div class="absolute bottom-6 left-6">
                             <div class="flex items-center gap-3 text-white/90 mb-1">
-                                <i class="ph-fill ph-warning-circle text-red text-xl"></i>
-                                <span class="font-heading font-bold text-sm">Low Stock Alert</span>
+                                <i class="ph-fill ph-warning-circle text-red text-xl bg-white rounded-full"></i>
+                                <span class="font-heading font-bold text-sm text-shadow">Low Stock Alert</span>
                             </div>
-                            <p class="text-xs text-white/60 max-w-[150px] leading-tight">9mm and 5.56 bulk boxes are available now.</p>
+                            <p class="text-xs text-white/80 max-w-[150px] leading-tight font-medium">9mm and 5.56 bulk boxes are available now.</p>
                         </div>
                     </div>
                 </div>
