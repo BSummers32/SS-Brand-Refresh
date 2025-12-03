@@ -2,7 +2,6 @@
  * Shoot Smart Brand Refresh - Interactive Logic
  */
 
-// 1. Tailwind Configuration
 tailwind.config = {
     theme: {
         extend: {
@@ -34,7 +33,6 @@ tailwind.config = {
     }
 }
 
-// 2. Scroll Animation Observer
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
@@ -52,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Select elements to animate (direct children of sections)
     const sections = document.querySelectorAll('section > div');
     sections.forEach(section => {
         section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');

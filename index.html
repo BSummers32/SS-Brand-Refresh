@@ -16,8 +16,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- --- LOCAL FILES --- -->
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <!-- ?v=2 forces the browser to reload the file if it was cached -->
+    <script src="script.js?v=2"></script>
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body class="font-body text-gray-900 antialiased bg-white">
 
@@ -62,7 +63,7 @@
                         TARGET <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-red to-red">ACQUIRED.</span>
                     </h1>
-                    <p class="text-xl text-gray-700 leading-relaxed max-w-lg font-light">
+                    <p class="text-xl text-gray-700 leading-relaxed max-w-lg font-medium">
                         This presentation demonstrates the shift from rigid block grids to <span class="font-semibold text-navy">fluid hybrid geometry</span>. We utilize circular masks to mimic target shapes and angled cuts to suggest forward motion.
                     </p>
                 </div>
@@ -78,7 +79,7 @@
                             </div>
                             <h2 class="text-white font-heading font-bold text-3xl">The Gloss Effect.</h2>
                             <p class="text-white/90 font-body text-base mt-2 text-center max-w-xs">
-                                Hover over this card. The light reflection mimics premium tactical coating surfaces, adding depth to flat colors.
+                                Hover over this card. The light reflection mimics premium tactical coating surfaces.
                             </p>
                         </div>
                     </div>
@@ -88,22 +89,22 @@
     </header>
 
     <!-- SECTION: SIGNAGE & PRINT -->
-    <section id="signage" class="py-24 bg-gray-50 relative overflow-visible">
-        <div class="container mx-auto px-6 relative z-10">
+    <section id="signage" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-4xl font-bold text-navy">Signage & Print Psychology</h2>
-                <p class="text-gray-600 mt-2 text-lg">How we use layout to control information flow in physical spaces.</p>
+                <p class="text-gray-700 mt-2 text-lg font-medium">How we use layout to control information flow in physical spaces.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
                 <!-- FLYER 1: Visual Rhythm (Fixed Content Alignment) -->
                 <div class="aspect-paper shadow-flyer bg-white flex flex-col group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
-                    <div class="bg-navy p-6 pb-10 relative clip-angle-bottom text-center">
+                    <div class="bg-navy p-6 pb-12 relative clip-angle-bottom text-center">
                         <h2 class="font-heading text-2xl font-bold text-white leading-none">VISUAL<br><span class="text-red">RHYTHM</span></h2>
                     </div>
-                    <!-- Increased top padding to ensure clear separation from the angled header -->
-                    <div class="px-6 pt-8 -mt-2 space-y-6 flex-1 relative z-10">
+                    <!-- Added much more top padding (pt-10) to force text below the header line -->
+                    <div class="px-6 pt-10 -mt-2 space-y-6 flex-1 relative z-10">
                         <div class="flex items-center gap-4">
                             <div class="w-14 h-14 shrink-0 bg-gray-100 circle-mask overflow-hidden flex items-center justify-center text-navy border border-gray-300">
                                 <i class="ph-bold ph-list-numbers text-2xl"></i>
@@ -148,7 +149,7 @@
                     </div>
                     <div class="flex-1 p-8 flex flex-col items-center text-center pt-8">
                         <h3 class="font-heading font-black text-navy text-2xl mb-2 leading-tight">NAVY BUILDS<br><span class="text-red">TRUST.</span></h3>
-                        <p class="text-sm text-gray-600 mt-2 max-w-[220px] leading-relaxed">
+                        <p class="text-sm text-gray-700 mt-2 max-w-[220px] leading-relaxed font-medium">
                             Using a dark header with a white content area creates a natural "gravity" that pulls the eye down to the offer.
                         </p>
                         <div class="bg-gray-50 rounded-xl p-5 w-full mt-6 border border-gray-200 shadow-sm">
@@ -156,7 +157,7 @@
                                 <span class="text-gray-500 font-bold uppercase text-xs">The Anchor</span>
                                 <span class="text-red font-black text-2xl">The Hook</span>
                             </div>
-                            <p class="text-xs text-gray-500 mt-2 text-left font-medium">Large pricing typography serves as the visual hook.</p>
+                            <p class="text-xs text-gray-600 mt-2 text-left font-bold">Large pricing typography serves as the visual hook.</p>
                         </div>
                     </div>
                     <div class="h-24 relative bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold uppercase tracking-widest border-t border-gray-300">
@@ -175,12 +176,12 @@
                     </div>
                     <div class="p-8 pt-4 flex-1">
                         <h3 class="font-heading font-bold text-navy text-xl mb-3">Directional Cues.</h3>
-                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        <p class="text-sm text-gray-700 mb-6 leading-relaxed font-medium">
                             The slanted image clip (polygon) acts as an arrow, pointing the viewer towards the body content below.
                         </p>
                         <div class="border-t border-gray-200 pt-4">
                             <h4 class="font-bold text-navy text-xs uppercase mb-3 tracking-wide">Data Organization</h4>
-                            <ul class="text-xs space-y-2 text-gray-600 font-medium">
+                            <ul class="text-xs space-y-2 text-gray-700 font-bold">
                                 <li class="flex justify-between border-b border-gray-100 pb-2"><span>Montserrat Font</span><span class="font-bold text-navy">Legibility</span></li>
                                 <li class="flex justify-between border-b border-gray-100 pb-2"><span>Banded Rows</span><span class="font-bold text-navy">Scanning</span></li>
                             </ul>
@@ -196,12 +197,12 @@
     </section>
 
     <!-- SECTION: SOCIAL MEDIA -->
-    <!-- Updated with "Bridging" Overlay - A large Navy element creating the connection -->
+    <!-- Updated with "Bridging" Overlay -->
     <section id="social" class="py-24 bg-white relative overflow-visible">
         
         <!-- THE BRIDGE: Top Overlay -->
         <!-- A large navy shard that cuts UP into the previous section and DOWN into this one -->
-        <div class="absolute top-[-5%] left-0 w-full h-[120%] bg-navy -skew-y-3 z-0 origin-top-left transform translate-y-12"></div>
+        <div class="absolute top-[-5%] left-0 w-full h-[120%] bg-navy -skew-y-3 z-0 origin-top-left transform translate-y-12 shadow-2xl"></div>
         
         <!-- THE BRIDGE: Bottom Overlay Accent -->
         <div class="absolute bottom-[-10%] right-0 w-2/3 h-full bg-red/10 -skew-y-6 z-0 pointer-events-none"></div>
@@ -210,7 +211,7 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div class="mb-4 md:mb-0">
                     <h2 class="font-heading text-4xl font-bold text-white">Social Feed Strategy</h2>
-                    <p class="text-white/80 mt-2 text-lg max-w-lg">
+                    <p class="text-white mt-2 text-lg max-w-lg font-medium">
                         The Overlay Technique: Floating cards across section boundaries creates depth without harsh lines.
                     </p>
                 </div>
@@ -225,11 +226,11 @@
                         <div class="absolute bottom-2 right-2 bg-red text-white w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border border-white shadow-sm">!</div>
                     </div>
                     <h2 class="font-heading text-xl font-bold text-white leading-none z-10 tracking-wide">CENTRAL<br><span class="text-red">FOCUS</span></h2>
-                    <p class="text-xs text-white/80 mt-3 max-w-[200px] leading-relaxed">Centering elements creates a "Target" effect.</p>
+                    <p class="text-sm text-white mt-3 max-w-[200px] leading-relaxed">Centering elements creates a "Target" effect.</p>
                 </div>
 
                 <!-- SOCIAL 2: Overlay Technique -->
-                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
+                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border-4 border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
                     <div class="p-8 h-[55%] flex flex-col justify-center relative z-20">
                         <h2 class="font-heading font-black text-navy text-3xl leading-none mb-2">OVERLAY<br>TECHNIQUE</h2>
                         <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center">
@@ -237,22 +238,22 @@
                         </div>
                     </div>
                     <div class="flex-1 relative bg-navy p-6">
-                        <p class="text-xs text-white/90 mt-4 leading-relaxed">Breaking the boundary between text and image areas creates modern 3D depth.</p>
+                        <p class="text-sm text-white mt-4 leading-relaxed">Breaking the boundary between the white text area and the dark image area creates modern 3D depth.</p>
                     </div>
                 </div>
 
                 <!-- SOCIAL 3: Dynamic Motion -->
-                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
+                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border-4 border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
                     <div class="h-[45%] relative clip-angle-bottom bg-navy flex items-center justify-center">
                         <h2 class="font-heading font-bold text-white text-2xl italic relative z-10">DYNAMIC<br>MOTION.</h2>
                         <div class="absolute inset-0 bg-gradient-to-r from-navy to-transparent opacity-50"></div>
                     </div>
                     <div class="p-8 pt-4 flex-1">
-                        <h3 class="text-navy font-bold uppercase text-xs mb-3 tracking-widest">Checklist Formatting</h3>
-                        <p class="text-xs text-gray-600 mb-4 font-medium">Icons replace bullets to add visual interest.</p>
-                        <ul class="space-y-3 text-xs text-gray-700">
-                            <li class="flex gap-2 items-center"><div class="p-1 bg-red/10 rounded-full"><i class="ph-bold ph-check text-red text-xs"></i></div> <span class="font-bold">Clarity</span></li>
-                            <li class="flex gap-2 items-center"><div class="p-1 bg-red/10 rounded-full"><i class="ph-bold ph-check text-red text-xs"></i></div> <span class="font-bold">Scannability</span></li>
+                        <h3 class="text-navy font-bold uppercase text-sm mb-3 tracking-widest">Checklist Formatting</h3>
+                        <p class="text-sm text-gray-600 mb-4 font-bold">Icons replace bullets to add visual interest.</p>
+                        <ul class="space-y-3 text-sm text-gray-700 font-medium">
+                            <li class="flex gap-2 items-center"><div class="p-1 bg-red/10 rounded-full"><i class="ph-bold ph-check text-red text-xs"></i></div> <span>Clarity</span></li>
+                            <li class="flex gap-2 items-center"><div class="p-1 bg-red/10 rounded-full"><i class="ph-bold ph-check text-red text-xs"></i></div> <span>Scannability</span></li>
                         </ul>
                     </div>
                 </div>
@@ -261,12 +262,11 @@
     </section>
 
     <!-- SECTION: EMAIL -->
-    <!-- The Navy bridge from Social extends down here to eliminate the hard line -->
-    <section id="email" class="py-24 bg-gray-50 relative">
+    <section id="email" class="py-24 bg-gray-50 relative border-t-8 border-navy">
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-4xl font-bold text-navy">Email UX/UI</h2>
-                <p class="text-gray-600 mt-2 text-lg">Applying the brand system to the inbox.</p>
+                <p class="text-gray-700 mt-2 text-lg font-medium">Applying the brand system to the inbox.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -284,7 +284,7 @@
                     <div class="p-8 flex-1">
                         <span class="text-red font-bold text-xs uppercase tracking-widest mb-2 block">Typography Study</span>
                         <h1 class="font-heading text-xl font-bold text-navy mb-4 leading-tight">Why We Chose Montserrat for Long-Form Text</h1>
-                        <p class="font-body text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="font-body text-gray-700 text-sm leading-relaxed mb-6 font-medium">
                             Notice how easy this paragraph is to read? That's Montserrat. Its geometric openness prevents eye fatigue during longer reads.
                         </p>
                         <a href="#" class="text-navy font-bold text-sm underline hover:text-red transition-colors">Read Case Study</a>
@@ -297,18 +297,18 @@
                         <div class="absolute inset-0 pattern-overlay opacity-20"></div>
                         <span class="bg-white text-navy px-3 py-1 text-[10px] font-bold uppercase rounded-sm relative z-10 mb-3 inline-block shadow-sm">The "CTA" Button</span>
                         <h2 class="font-heading text-white text-2xl font-bold relative z-10 mb-2">Action Color</h2>
-                        <div class="relative z-10 text-white/90 text-sm mt-2 leading-tight">
+                        <div class="relative z-10 text-white/90 text-sm mt-2 leading-tight font-medium">
                             We reserve the brightest red (#B5343B) for the primary call-to-action.
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 grid grid-cols-2 gap-4 flex-1">
                         <div class="bg-white p-4 rounded border border-gray-200 text-center flex flex-col justify-center shadow-sm">
                             <p class="font-bold text-navy text-sm mb-1">Grid Layout</p>
-                            <p class="text-xs text-gray-500">Organizes Chaos</p>
+                            <p class="text-xs text-gray-600 font-bold">Organizes Chaos</p>
                         </div>
                         <div class="bg-white p-4 rounded border border-gray-200 text-center flex flex-col justify-center shadow-sm">
                             <p class="font-bold text-navy text-sm mb-1">White Space</p>
-                            <p class="text-xs text-gray-500">Isolates Products</p>
+                            <p class="text-xs text-gray-600 font-bold">Isolates Products</p>
                         </div>
                     </div>
                 </div>
@@ -322,7 +322,7 @@
                     <div class="bg-white relative p-8 pt-8 flex-1">
                         <div class="absolute top-[-20px] left-0 w-full h-[30px] bg-white" style="clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);"></div>
                         <h3 class="font-heading font-bold text-navy text-lg mb-3 text-center">Dark Mode Luxury.</h3>
-                        <p class="text-sm text-gray-600 text-center mb-8 leading-relaxed">
+                        <p class="text-sm text-gray-700 text-center mb-8 leading-relaxed font-medium">
                             For premium tiers (Patriot Membership), we invert the color scheme. A Navy dominant background signifies exclusivity.
                         </p>
                         <div class="block w-full bg-red text-white font-bold py-4 text-center text-sm uppercase shadow-lg rounded hover:bg-red-700 transition-colors cursor-pointer gloss-surface">
