@@ -52,7 +52,7 @@
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
                 <source src="ss-full-promo-vid.mp4" type="video/mp4">
             </video>
-            <!-- White Gradient Overlay -->
+            <!-- White Gradient Overlay: Updated to be more transparent on the right -->
             <div class="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent"></div>
         </div>
 
@@ -215,6 +215,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div class="mb-4 md:mb-0">
+                    <!-- Changed text to Navy for visibility on Gray -->
                     <h2 class="font-heading text-4xl font-bold text-navy">Social Feed Strategy</h2>
                     <p class="text-gray-600 mt-2 text-lg max-w-lg font-medium">
                         Using depth, texture, and motion to stop the scroll.
@@ -261,18 +262,17 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80 z-10"></div>
                     
                     <!-- PRICE SLASH BANNER (Diagonal TR to BL) -->
-                    <!-- Rotated 45 degrees, centered, creating a sash across the image -->
                     <div class="absolute top-1/2 left-1/2 w-32 h-[200%] bg-red transform -translate-x-1/2 -translate-y-1/2 rotate-[45deg] border-x-4 border-white/20 shadow-2xl z-10"></div>
 
                     <!-- TEXT CONTENT -->
                     <div class="absolute inset-0 p-6 z-20">
-                        <!-- Top Right Text (Aligned with the top of the slash) -->
+                        <!-- Top Right Text -->
                         <div class="absolute top-8 right-4 text-right transform rotate-[0deg]">
                             <span class="bg-white text-red px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-1 inline-block shadow-sm">Flash Sale</span>
                             <h2 class="font-display font-bold text-5xl text-white leading-[0.85] drop-shadow-md">AMMO<br>DROP</h2>
                         </div>
                         
-                        <!-- Bottom Left Content (Aligned with bottom of slash) -->
+                        <!-- Bottom Left Content -->
                         <div class="absolute bottom-6 left-6">
                             <div class="flex items-center gap-3 text-white/90 mb-1">
                                 <i class="ph-fill ph-warning-circle text-red text-xl bg-white rounded-full"></i>
@@ -379,17 +379,17 @@
                             <source src="ss-training-vid.mp4" type="video/mp4">
                         </video>
                         <div class="absolute inset-0 bg-navy/20"></div>
-                        <div class="absolute top-4 left-4 bg-navy text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">The Range Report</div>
+                        <div class="absolute top-4 left-4 bg-navy text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">The Hero Module</div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-heading text-3xl font-bold leading-tight mb-4">Why Your Stance Matters</h3>
+                            <h3 class="font-heading text-3xl font-bold leading-tight mb-4">Establish Hierarchy</h3>
                             <p class="font-body text-gray-600 text-sm leading-relaxed mb-6">
-                                Notice how easy this text is to read? That's Montserrat. Its geometric openness prevents eye fatigue during longer reads like newsletters.
+                                By allocating 50% of the grid to a single visual story, we force a focal point. Use this "Hero Module" for your most critical campaign or educational content to prevent choice paralysis.
                             </p>
                         </div>
                         <div class="flex items-center gap-2 text-red font-bold text-sm uppercase tracking-wide cursor-pointer hover:underline">
-                            Read Case Study <i class="ph-bold ph-arrow-right"></i>
+                            View Layout Guidelines <i class="ph-bold ph-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -398,28 +398,27 @@
                 <div class="lg:col-span-1 lg:row-span-2 bg-navy bento-card p-8 flex flex-col items-center justify-center text-center text-white shadow-lg border-2 border-navy relative">
                     <div class="absolute inset-0 pattern-target opacity-10"></div>
                     <div class="relative z-10">
-                        <i class="ph-duotone ph-crown text-5xl text-white/90 mb-4"></i>
-                        <h2 class="font-heading font-black text-3xl text-white leading-none mb-2">PREMIUM<br><span class="text-red">STATUS</span></h2>
-                        <p class="text-xs text-white/60 mb-6">Dark mode signifies luxury tiers.</p>
-                        <button class="bg-red text-white w-full py-3 rounded font-bold text-xs uppercase shadow-md hover:bg-red-700 transition-colors">Upgrade</button>
+                        <i class="ph-duotone ph-columns text-5xl text-white/90 mb-4"></i>
+                        <h2 class="font-heading font-black text-3xl text-white leading-none mb-2">VISUAL<br><span class="text-red">ANCHOR</span></h2>
+                        <p class="text-xs text-white/60 mb-6">Inverted colors separate categories.</p>
+                        <button class="bg-red text-white w-full py-3 rounded font-bold text-xs uppercase shadow-md hover:bg-red-700 transition-colors">Visual Break</button>
                     </div>
                 </div>
 
                 <!-- 3. CATALOGUE ITEM 1 (Action Block) - Spans 1x1 -->
                 <div class="lg:col-span-1 lg:row-span-1 bg-white bento-card p-6 border-t-4 border-red shadow-md flex flex-col justify-center">
-                    <span class="bg-red/10 text-red px-2 py-1 rounded text-[10px] font-bold uppercase tracking-widest w-max mb-2">Door Buster</span>
-                    <h4 class="font-heading font-bold text-navy text-lg leading-tight">Range Bag</h4>
+                    <span class="bg-red/10 text-red px-2 py-1 rounded text-[10px] font-bold uppercase tracking-widest w-max mb-2">Conversion</span>
+                    <h4 class="font-heading font-bold text-navy text-lg leading-tight">Action Blocks</h4>
                     <div class="flex items-baseline gap-2 mt-1">
-                        <span class="text-gray-400 line-through text-xs">$69.99</span>
-                        <span class="text-red font-black text-xl">$45.00</span>
+                        <p class="text-gray-500 text-xs">High contrast borders signal interactivity.</p>
                     </div>
                 </div>
 
                 <!-- 4. CATALOGUE ITEM 2 (Grid Block) - Spans 1x1 -->
                 <div class="lg:col-span-1 lg:row-span-1 bg-gray-50 bento-card p-6 border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center hover:bg-white transition-colors">
                     <i class="ph-duotone ph-squares-four text-3xl text-navy mb-2"></i>
-                    <p class="font-bold text-navy text-sm">Grid Layout</p>
-                    <p class="text-xs text-gray-500">Organizes Chaos</p>
+                    <p class="font-bold text-navy text-sm">Modular Data</p>
+                    <p class="text-xs text-gray-500">Secondary Stats</p>
                 </div>
 
             </div>
