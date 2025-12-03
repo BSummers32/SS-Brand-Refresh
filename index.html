@@ -16,8 +16,8 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- --- LOCAL FILES --- -->
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="script.js?v=2"></script>
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body class="font-body text-gray-900 antialiased bg-white">
 
@@ -44,14 +44,21 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION: THE VISION -->
     <header id="vision" class="relative pt-32 pb-20 lg:pt-48 lg:pb-48 overflow-hidden">
-        <!-- Abstract Blobs -->
-        <div class="absolute top-20 right-[-5%] w-96 h-96 bg-navy/5 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-10 left-10 w-64 h-64 bg-red/5 rounded-full blur-2xl -z-10"></div>
+        
+        <!-- VIDEO BACKGROUND WITH FADE -->
+        <div class="absolute inset-0 -z-10">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="ss-full-promo-vid.mp4" type="video/mp4">
+            </video>
+            <!-- White Gradient Overlay: Ensures text readability on the left while showing video on the right -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40"></div>
+        </div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Text Content -->
                 <div class="lg:w-1/2 space-y-8">
                     <div class="flex items-center gap-4">
                         <div class="h-1 w-12 bg-red rounded-full"></div>
@@ -66,10 +73,12 @@
                     </p>
                 </div>
                 
+                <!-- Visual Card (Gloss Effect) -->
                 <div class="lg:w-1/2 relative">
                     <div class="relative w-full aspect-square max-w-md mx-auto">
                         <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-red rounded-full opacity-10 scale-110"></div>
                         <div class="absolute inset-0 gloss-surface bg-navy rounded-[2rem] shadow-gloss flex flex-col items-center justify-center p-8 z-10 hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-white/20">
+                            <!-- Icon inside card -->
                             <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-6 p-4">
                                 <img src="SS Logo Favicon Color.png" alt="Icon" class="w-full h-full object-contain">
                             </div>
@@ -245,9 +254,15 @@
 
                 <!-- CONCEPT 3: THE RED ZONE (AMMO DROP) -->
                 <div class="aspect-square bg-gray-900 relative rounded-xl overflow-hidden shadow-flyer group cursor-pointer border-4 border-white transform hover:-translate-y-2 transition-duration-300">
-                    <img src="Blazer 9mm Ammo.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute top-0 right-0 w-[65%] h-full bg-red transform skew-x-[-15deg] translate-x-10 origin-top shadow-2xl border-l-4 border-white/20"></div>
+                    
+                    <!-- REPLACED IMAGE WITH VIDEO LOOP -->
+                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                        <source src="ammo-loop.mp4" type="video/mp4">
+                        <!-- Fallback image if video fails to load -->
+                        <img src="Blazer 9mm Ammo.jpg" class="w-full h-full object-cover" alt="Ammo Background">
+                    </video>
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80 z-10"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between relative z-10">
                         <div class="self-end text-right mt-4 mr-2">
                             <span class="bg-white text-red px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-2 inline-block">Flash Sale</span>
@@ -353,10 +368,12 @@
                 
                 <!-- 1. NEWSLETTER (Large Primary Block) - Spans 2x2 -->
                 <div class="lg:col-span-2 lg:row-span-2 bg-white bento-card p-0 flex flex-col justify-between text-navy shadow-lg border border-gray-200 group">
-                    <div class="h-48 bg-gray-200 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                            <i class="ph-fill ph-article text-6xl text-navy/20 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
+                    <div class="h-48 relative overflow-hidden">
+                        <!-- TRAINING VIDEO ADDED HERE -->
+                        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <source src="ss-training-vid.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-navy/20"></div>
                         <div class="absolute top-4 left-4 bg-navy text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">The Range Report</div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col justify-between">
