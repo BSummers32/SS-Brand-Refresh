@@ -97,12 +97,14 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <!-- FLYER 1: Visual Rhythm (Fixed Alignment) -->
+                <!-- FLYER 1: Visual Rhythm (Fixed Content Alignment) -->
                 <div class="aspect-paper shadow-flyer bg-white flex flex-col group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
-                    <div class="bg-navy p-6 pb-8 relative clip-angle-bottom text-center">
+                    <!-- Increased bottom padding (pb-10) to clear the angle cut -->
+                    <div class="bg-navy p-6 pb-10 relative clip-angle-bottom text-center">
                         <h2 class="font-heading text-2xl font-bold text-white leading-none">VISUAL<br><span class="text-red">RHYTHM</span></h2>
                     </div>
-                    <div class="px-6 -mt-2 space-y-6 flex-1 relative z-10">
+                    <!-- Added top padding (pt-6) to push content down into the white space -->
+                    <div class="px-6 pt-6 -mt-2 space-y-6 flex-1 relative z-10">
                         <!-- Commentary Item 1 -->
                         <div class="flex items-center gap-4">
                             <div class="w-14 h-14 shrink-0 bg-gray-100 circle-mask overflow-hidden flex items-center justify-center text-navy border border-gray-300">
@@ -142,7 +144,7 @@
                     </div>
                 </div>
 
-                <!-- FLYER 2: Brand Authority (Higher Contrast) -->
+                <!-- FLYER 2: Brand Authority -->
                 <div class="aspect-paper shadow-flyer flex flex-col border-b-8 border-navy bg-white group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
                     <div class="bg-navy h-1/3 flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
                         <div class="absolute inset-0 opacity-10 pattern-overlay"></div>
@@ -169,7 +171,7 @@
                     </div>
                 </div>
 
-                <!-- FLYER 3: Kinetic Angles (Better Text Sizing) -->
+                <!-- FLYER 3: Kinetic Angles -->
                 <div class="aspect-paper shadow-flyer flex flex-col bg-white group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
                     <div class="h-1/3 relative clip-angle-bottom bg-navy flex items-center justify-center">
                          <div class="absolute inset-0 bg-gradient-to-tr from-navy to-blue-900"></div>
@@ -200,18 +202,28 @@
         </div>
     </section>
 
-    <!-- SECTION: SOCIAL MEDIA -->
-    <section id="social" class="py-24 bg-navy relative border-t border-white/10">
-        <div class="absolute inset-0 pattern-target opacity-5 pointer-events-none"></div>
+    <!-- SECTION: SOCIAL MEDIA (Geometric Overlay) -->
+    <!-- Updated: Continuous White BG with Geometric Overlay Interest -->
+    <section id="social" class="py-24 bg-white relative overflow-hidden">
+        
+        <!-- The "Overlay" Element: Large Geometric Navy Shape -->
+        <!-- This creates the boundary for the cards to overlay -->
+        <div class="absolute top-0 right-[-10%] w-[60%] h-full bg-navy -skew-x-12 transform origin-top-right z-0"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[50%] bg-gray-50 -skew-x-12 transform origin-bottom-left z-0"></div>
+
         <div class="container mx-auto px-6 relative z-10">
-            <div class="text-white mb-12">
-                <h2 class="font-heading text-4xl font-bold">Social Feed Strategy</h2>
-                <p class="text-white/80 mt-2 text-lg">Optimized for squares. High contrast, large focal points to stop the scroll.</p>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="font-heading text-4xl font-bold text-navy">Social Feed Strategy</h2>
+                    <p class="text-gray-600 mt-2 text-lg max-w-lg">
+                        <span class="text-red font-bold">The Overlay Technique:</span> Notice how the cards below float across the Navy/White boundary? This creates depth and dimension without feeling blocky.
+                    </p>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- SOCIAL 1: Circle Focus (Added Border for Contrast) -->
-                <div class="aspect-square shadow-lg bg-navy relative border-2 border-white/20 flex flex-col items-center justify-center p-4 text-center rounded-lg">
+                <!-- SOCIAL 1: Circle Focus -->
+                <div class="aspect-square shadow-flyer bg-navy relative border-4 border-white flex flex-col items-center justify-center p-4 text-center rounded-xl transform hover:-translate-y-2 transition-duration-300">
                     <div class="absolute inset-0 pattern-overlay opacity-10"></div>
                     <div class="w-32 h-32 bg-white/10 circle-mask-lg overflow-hidden mb-4 relative z-10 flex items-center justify-center backdrop-blur-sm border border-white/30">
                         <i class="ph-duotone ph-aperture text-4xl text-white"></i>
@@ -221,8 +233,8 @@
                     <p class="text-xs text-white/80 mt-3 max-w-[200px] leading-relaxed">Centering elements creates a "Target" effect, focusing attention instantly.</p>
                 </div>
 
-                <!-- SOCIAL 2: Overlay Technique (Added Border) -->
-                <div class="aspect-square shadow-lg flex flex-col bg-white rounded-lg border-2 border-white overflow-hidden">
+                <!-- SOCIAL 2: Overlay Technique -->
+                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
                     <div class="p-8 h-[55%] flex flex-col justify-center relative z-20">
                         <h2 class="font-heading font-black text-navy text-3xl leading-none mb-2">OVERLAY<br>TECHNIQUE</h2>
                         <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center">
@@ -234,8 +246,8 @@
                     </div>
                 </div>
 
-                <!-- SOCIAL 3: Dynamic Motion (Added Border) -->
-                <div class="aspect-square shadow-lg flex flex-col bg-white rounded-lg border-2 border-white overflow-hidden">
+                <!-- SOCIAL 3: Dynamic Motion -->
+                <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
                     <div class="h-[45%] relative clip-angle-bottom bg-navy flex items-center justify-center">
                         <h2 class="font-heading font-bold text-white text-2xl italic relative z-10">DYNAMIC<br>MOTION.</h2>
                         <div class="absolute inset-0 bg-gradient-to-r from-navy to-transparent opacity-50"></div>
@@ -264,7 +276,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 
                 <!-- EMAIL 1: Blog Format -->
-                <div class="bg-white shadow-card overflow-hidden h-full flex flex-col border border-gray-200 rounded-md">
+                <div class="bg-white shadow-flyer overflow-hidden h-full flex flex-col border border-gray-200 rounded-md group hover:-translate-y-1 transition-transform">
                     <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
                         <span class="text-navy font-heading font-bold text-xs tracking-widest">SHOOT SMART</span>
                         <span class="text-xs text-gray-500 font-bold uppercase">BLOG FORMAT</span>
@@ -284,7 +296,7 @@
                 </div>
 
                 <!-- EMAIL 2: Catalogue Grid -->
-                <div class="bg-white shadow-card overflow-hidden border-t-4 border-red h-full flex flex-col border-x border-b border-gray-200 rounded-md">
+                <div class="bg-white shadow-flyer overflow-hidden border-t-4 border-red h-full flex flex-col border-x border-b border-gray-200 rounded-md group hover:-translate-y-1 transition-transform">
                     <div class="bg-navy p-8 text-center relative overflow-hidden">
                         <div class="absolute inset-0 pattern-overlay opacity-20"></div>
                         <span class="bg-white text-navy px-3 py-1 text-[10px] font-bold uppercase rounded-sm relative z-10 mb-3 inline-block shadow-sm">The "CTA" Button</span>
@@ -306,7 +318,7 @@
                 </div>
 
                 <!-- EMAIL 3: Premium Inversion -->
-                <div class="bg-navy shadow-card overflow-hidden h-full flex flex-col border border-navy rounded-md">
+                <div class="bg-navy shadow-flyer overflow-hidden h-full flex flex-col border border-navy rounded-md group hover:-translate-y-1 transition-transform">
                     <div class="p-8 text-center relative">
                         <i class="ph-duotone ph-crown text-4xl text-white/90 mb-3"></i>
                         <h2 class="font-heading font-black text-2xl text-white leading-none mb-1">PREMIUM<br><span class="text-red">INVERSION</span></h2>
