@@ -3,7 +3,6 @@
  */
 
 // 1. Tailwind Configuration
-// We configure this here so it applies to the CDN loaded in HTML
 tailwind.config = {
     theme: {
         extend: {
@@ -36,7 +35,6 @@ tailwind.config = {
 }
 
 // 2. Scroll Animation Observer
-// This triggers the "fade up" animation as the user scrolls down
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
@@ -47,22 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // When element enters viewport:
                 entry.target.classList.add('opacity-100', 'translate-y-0');
                 entry.target.classList.remove('opacity-0', 'translate-y-10');
-                // Stop observing once animated
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Target specific sections for animation
-    // We target the direct children divs of sections to animate them in blocks
-    const animatedElements = document.querySelectorAll('section > div');
-    
-    animatedElements.forEach(el => {
-        // Set initial state (invisible and pushed down)
-        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-        observer.observe(el);
+    // Select elements to animate (direct children of sections)
+    const sections = document.querySelectorAll('section > div');
+    sections.forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
     });
 });

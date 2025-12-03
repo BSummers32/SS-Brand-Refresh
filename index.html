@@ -88,8 +88,8 @@
     </header>
 
     <!-- SECTION: SIGNAGE & PRINT -->
-    <section id="signage" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-6">
+    <section id="signage" class="py-24 bg-gray-50 relative overflow-visible">
+        <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-4xl font-bold text-navy">Signage & Print Psychology</h2>
                 <p class="text-gray-600 mt-2 text-lg">How we use layout to control information flow in physical spaces.</p>
@@ -99,13 +99,11 @@
                 
                 <!-- FLYER 1: Visual Rhythm (Fixed Content Alignment) -->
                 <div class="aspect-paper shadow-flyer bg-white flex flex-col group hover:-translate-y-2 transition-transform duration-500 border border-gray-200">
-                    <!-- Increased bottom padding (pb-10) to clear the angle cut -->
                     <div class="bg-navy p-6 pb-10 relative clip-angle-bottom text-center">
                         <h2 class="font-heading text-2xl font-bold text-white leading-none">VISUAL<br><span class="text-red">RHYTHM</span></h2>
                     </div>
-                    <!-- Added top padding (pt-6) to push content down into the white space -->
-                    <div class="px-6 pt-6 -mt-2 space-y-6 flex-1 relative z-10">
-                        <!-- Commentary Item 1 -->
+                    <!-- Increased top padding to ensure clear separation from the angled header -->
+                    <div class="px-6 pt-8 -mt-2 space-y-6 flex-1 relative z-10">
                         <div class="flex items-center gap-4">
                             <div class="w-14 h-14 shrink-0 bg-gray-100 circle-mask overflow-hidden flex items-center justify-center text-navy border border-gray-300">
                                 <i class="ph-bold ph-list-numbers text-2xl"></i>
@@ -113,10 +111,8 @@
                             <div>
                                 <h3 class="font-heading font-bold text-navy text-sm uppercase leading-tight">Repetitive Structure</h3>
                                 <p class="text-red font-bold text-xs">Reduces Cognitive Load</p>
-                                <p class="text-xs text-gray-600 mt-1 leading-snug">Consistent iconography anchors the eye, allowing the user to scan prices instantly.</p>
                             </div>
                         </div>
-                        <!-- Commentary Item 2 -->
                         <div class="flex items-center gap-4">
                             <div class="w-14 h-14 shrink-0 bg-gray-100 circle-mask overflow-hidden flex items-center justify-center text-navy border border-gray-300">
                                 <i class="ph-bold ph-circle text-2xl"></i>
@@ -124,10 +120,8 @@
                             <div>
                                 <h3 class="font-heading font-bold text-navy text-sm uppercase leading-tight">Circular Masks</h3>
                                 <p class="text-red font-bold text-xs">Organic Disruption</p>
-                                <p class="text-xs text-gray-600 mt-1 leading-snug">Circles break the rectangular grid of the paper, mirroring the shape of a target.</p>
                             </div>
                         </div>
-                        <!-- Commentary Item 3 -->
                         <div class="flex items-center gap-4">
                             <div class="w-14 h-14 shrink-0 bg-gray-100 circle-mask overflow-hidden flex items-center justify-center text-navy border border-gray-300">
                                 <i class="ph-bold ph-arrows-out text-2xl"></i>
@@ -135,7 +129,6 @@
                             <div>
                                 <h3 class="font-heading font-bold text-navy text-sm uppercase leading-tight">Whitespace</h3>
                                 <p class="text-red font-bold text-xs">Breathing Room</p>
-                                <p class="text-xs text-gray-600 mt-1 leading-snug">Generous padding ensures the information doesn't feel cluttered or "cheap."</p>
                             </div>
                         </div>
                     </div>
@@ -183,7 +176,7 @@
                     <div class="p-8 pt-4 flex-1">
                         <h3 class="font-heading font-bold text-navy text-xl mb-3">Directional Cues.</h3>
                         <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                            The slanted image clip (polygon) isn't just stylistic. It acts as an arrow, physically pointing the viewer towards the body content below.
+                            The slanted image clip (polygon) acts as an arrow, pointing the viewer towards the body content below.
                         </p>
                         <div class="border-t border-gray-200 pt-4">
                             <h4 class="font-bold text-navy text-xs uppercase mb-3 tracking-wide">Data Organization</h4>
@@ -202,21 +195,23 @@
         </div>
     </section>
 
-    <!-- SECTION: SOCIAL MEDIA (Geometric Overlay) -->
-    <!-- Updated: Continuous White BG with Geometric Overlay Interest -->
-    <section id="social" class="py-24 bg-white relative overflow-hidden">
+    <!-- SECTION: SOCIAL MEDIA -->
+    <!-- Updated with "Bridging" Overlay - A large Navy element creating the connection -->
+    <section id="social" class="py-24 bg-white relative overflow-visible">
         
-        <!-- The "Overlay" Element: Large Geometric Navy Shape -->
-        <!-- This creates the boundary for the cards to overlay -->
-        <div class="absolute top-0 right-[-10%] w-[60%] h-full bg-navy -skew-x-12 transform origin-top-right z-0"></div>
-        <div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[50%] bg-gray-50 -skew-x-12 transform origin-bottom-left z-0"></div>
+        <!-- THE BRIDGE: Top Overlay -->
+        <!-- A large navy shard that cuts UP into the previous section and DOWN into this one -->
+        <div class="absolute top-[-5%] left-0 w-full h-[120%] bg-navy -skew-y-3 z-0 origin-top-left transform translate-y-12"></div>
+        
+        <!-- THE BRIDGE: Bottom Overlay Accent -->
+        <div class="absolute bottom-[-10%] right-0 w-2/3 h-full bg-red/10 -skew-y-6 z-0 pointer-events-none"></div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div class="mb-4 md:mb-0">
-                    <h2 class="font-heading text-4xl font-bold text-navy">Social Feed Strategy</h2>
-                    <p class="text-gray-600 mt-2 text-lg max-w-lg">
-                        <span class="text-red font-bold">The Overlay Technique:</span> Notice how the cards below float across the Navy/White boundary? This creates depth and dimension without feeling blocky.
+                    <h2 class="font-heading text-4xl font-bold text-white">Social Feed Strategy</h2>
+                    <p class="text-white/80 mt-2 text-lg max-w-lg">
+                        The Overlay Technique: Floating cards across section boundaries creates depth without harsh lines.
                     </p>
                 </div>
             </div>
@@ -230,7 +225,7 @@
                         <div class="absolute bottom-2 right-2 bg-red text-white w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border border-white shadow-sm">!</div>
                     </div>
                     <h2 class="font-heading text-xl font-bold text-white leading-none z-10 tracking-wide">CENTRAL<br><span class="text-red">FOCUS</span></h2>
-                    <p class="text-xs text-white/80 mt-3 max-w-[200px] leading-relaxed">Centering elements creates a "Target" effect, focusing attention instantly.</p>
+                    <p class="text-xs text-white/80 mt-3 max-w-[200px] leading-relaxed">Centering elements creates a "Target" effect.</p>
                 </div>
 
                 <!-- SOCIAL 2: Overlay Technique -->
@@ -242,7 +237,7 @@
                         </div>
                     </div>
                     <div class="flex-1 relative bg-navy p-6">
-                        <p class="text-xs text-white/90 mt-4 leading-relaxed">By breaking the boundary between the white text area and the dark image area, we create 3D depth that feels modern and premium.</p>
+                        <p class="text-xs text-white/90 mt-4 leading-relaxed">Breaking the boundary between text and image areas creates modern 3D depth.</p>
                     </div>
                 </div>
 
@@ -266,8 +261,9 @@
     </section>
 
     <!-- SECTION: EMAIL -->
-    <section id="email" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-6">
+    <!-- The Navy bridge from Social extends down here to eliminate the hard line -->
+    <section id="email" class="py-24 bg-gray-50 relative">
+        <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-4xl font-bold text-navy">Email UX/UI</h2>
                 <p class="text-gray-600 mt-2 text-lg">Applying the brand system to the inbox.</p>
@@ -289,7 +285,7 @@
                         <span class="text-red font-bold text-xs uppercase tracking-widest mb-2 block">Typography Study</span>
                         <h1 class="font-heading text-xl font-bold text-navy mb-4 leading-tight">Why We Chose Montserrat for Long-Form Text</h1>
                         <p class="font-body text-gray-600 text-sm leading-relaxed mb-6">
-                            Notice how easy this paragraph is to read? That's Montserrat. Its geometric openness prevents eye fatigue during longer reads, like this newsletter, ensuring your message actually gets consumed.
+                            Notice how easy this paragraph is to read? That's Montserrat. Its geometric openness prevents eye fatigue during longer reads.
                         </p>
                         <a href="#" class="text-navy font-bold text-sm underline hover:text-red transition-colors">Read Case Study</a>
                     </div>
@@ -327,9 +323,9 @@
                         <div class="absolute top-[-20px] left-0 w-full h-[30px] bg-white" style="clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);"></div>
                         <h3 class="font-heading font-bold text-navy text-lg mb-3 text-center">Dark Mode Luxury.</h3>
                         <p class="text-sm text-gray-600 text-center mb-8 leading-relaxed">
-                            For premium tiers (Patriot Membership), we invert the color scheme. A Navy dominant background signifies exclusivity and higher status compared to the standard white emails.
+                            For premium tiers (Patriot Membership), we invert the color scheme. A Navy dominant background signifies exclusivity.
                         </p>
-                        <div class="block w-full bg-red text-white font-bold py-4 text-center text-sm uppercase shadow-lg rounded hover:bg-red-700 transition-colors cursor-pointer">
+                        <div class="block w-full bg-red text-white font-bold py-4 text-center text-sm uppercase shadow-lg rounded hover:bg-red-700 transition-colors cursor-pointer gloss-surface">
                             Upgrade Visuals
                         </div>
                     </div>
@@ -340,7 +336,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-navy text-white py-12 border-t border-white/10">
+    <footer class="bg-navy text-white py-12 border-t border-white/10 relative z-10">
         <div class="container mx-auto px-6 text-center lg:text-left flex flex-col lg:flex-row justify-between items-center">
             <div class="mb-6 lg:mb-0">
                 <div class="font-heading font-black text-2xl tracking-tight mb-2">SHOOT SMART</div>
@@ -352,6 +348,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- INTERACTION SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('section > div');
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
