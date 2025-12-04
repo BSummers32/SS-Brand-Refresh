@@ -57,3 +57,13 @@
     transition: all 0.3s ease;
 }
 .bento-card:hover { transform: translateY(-2px); }
+
+/* --- ANIMATIONS --- */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
