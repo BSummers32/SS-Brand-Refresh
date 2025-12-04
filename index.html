@@ -238,7 +238,8 @@
 
                 <!-- CONCEPT 2: THE OVERLAY TECHNIQUE (UPDATED) -->
                 <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border-4 border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
-                    <div class="p-8 h-[55%] flex flex-col justify-center relative z-20 overflow-hidden">
+                    <!-- Removed overflow-hidden from this container so the badge can overlap the boundary -->
+                    <div class="p-8 h-[55%] flex flex-col justify-center relative z-20">
                         
                         <!-- NEW: Video Background -->
                         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
@@ -250,9 +251,11 @@
                         <!-- Content -->
                         <div class="relative z-20">
                             <h2 class="font-heading font-black text-navy text-3xl leading-none mb-2">OVERLAY<br>TECHNIQUE</h2>
-                            <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center">
-                                <span class="font-heading font-bold text-sm block tracking-widest">DEPTH</span>
-                            </div>
+                        </div>
+
+                        <!-- Badge Moved Here: Positioned relative to the container height, not the text wrapper -->
+                        <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center z-30">
+                            <span class="font-heading font-bold text-sm block tracking-widest">DEPTH</span>
                         </div>
                     </div>
                     <div class="flex-1 relative bg-navy p-6">
