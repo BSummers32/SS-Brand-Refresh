@@ -236,12 +236,23 @@
                     </div>
                 </div>
 
-                <!-- CONCEPT 2: THE OVERLAY TECHNIQUE -->
+                <!-- CONCEPT 2: THE OVERLAY TECHNIQUE (UPDATED) -->
                 <div class="aspect-square shadow-flyer flex flex-col bg-white rounded-xl border-4 border-gray-100 overflow-hidden transform hover:-translate-y-2 transition-duration-300">
-                    <div class="p-8 h-[55%] flex flex-col justify-center relative z-20">
-                        <h2 class="font-heading font-black text-navy text-3xl leading-none mb-2">OVERLAY<br>TECHNIQUE</h2>
-                        <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center">
-                            <span class="font-heading font-bold text-sm block tracking-widest">DEPTH</span>
+                    <div class="p-8 h-[55%] flex flex-col justify-center relative z-20 overflow-hidden">
+                        
+                        <!-- NEW: Video Background -->
+                        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                            <source src="gunsmith-vid.mp4" type="video/mp4">
+                        </video>
+                        <!-- NEW: White overlay for Navy text readability -->
+                        <div class="absolute inset-0 bg-white/70 z-10 backdrop-blur-[1px]"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative z-20">
+                            <h2 class="font-heading font-black text-navy text-3xl leading-none mb-2">OVERLAY<br>TECHNIQUE</h2>
+                            <div class="absolute -bottom-4 right-4 bg-red text-white px-4 py-2 rounded-lg shadow-lg border-2 border-white text-center">
+                                <span class="font-heading font-bold text-sm block tracking-widest">DEPTH</span>
+                            </div>
                         </div>
                     </div>
                     <div class="flex-1 relative bg-navy p-6">
@@ -297,15 +308,18 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 
-                <!-- EMAIL 1: Blog Format -->
+                <!-- EMAIL 1: Blog Format (UPDATED) -->
                 <div class="bg-white shadow-flyer overflow-hidden h-full flex flex-col border border-gray-200 rounded-md group hover:-translate-y-1 transition-transform">
                     <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
                         <span class="text-navy font-heading font-bold text-xs tracking-widest">SHOOT SMART</span>
                         <span class="text-xs text-gray-500 font-bold uppercase">BLOG FORMAT</span>
                     </div>
-                    <div class="h-48 bg-gray-100 flex items-center justify-center text-gray-300 border-b border-gray-100">
-                        <i class="ph-fill ph-article text-5xl"></i>
+                    
+                    <!-- NEW: Training Image -->
+                    <div class="h-48 w-full relative overflow-hidden border-b border-gray-100">
+                        <img src="training-pic.jpg" alt="Training Class" class="w-full h-full object-cover">
                     </div>
+                    
                     <div class="p-8 flex-1">
                         <span class="text-red font-bold text-xs uppercase tracking-widest mb-2 block">Typography Study</span>
                         <h1 class="font-heading text-xl font-bold text-navy mb-4 leading-tight">Why We Chose Montserrat for Long-Form Text</h1>
