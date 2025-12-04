@@ -230,8 +230,11 @@
                 
                 <!-- CONCEPT 1: THE TACTICAL PATCH -->
                 <div class="aspect-square bg-navy relative rounded-xl overflow-hidden shadow-flyer flex items-center justify-center group cursor-pointer border-4 border-white transform hover:-translate-y-2 transition-duration-300">
-                    <!-- CHANGED: Scale increased to [2.5] to ensure full coverage while spinning -->
-                    <img src="target-pattern-white.png" class="absolute inset-0 w-full h-full object-cover scale-[2.5] spin-slow">
+                    <!-- CHANGED: Added a wrapper div to handle scaling so the rotation animation on the img doesn't override it. -->
+                    <div class="absolute inset-0 w-full h-full scale-[2.5]">
+                        <img src="target-pattern-white.png" class="w-full h-full object-cover spin-slow">
+                    </div>
+                    
                     <div class="relative z-10 w-48 h-48 bg-navy border-4 border-white/20 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-4 gloss-surface transform group-hover:scale-105 transition-all duration-300">
                         <div class="absolute inset-1 border border-white/10 rounded-2xl pointer-events-none"></div>
                         <div class="w-16 h-16 bg-red rounded-full flex items-center justify-center text-white mb-3 shadow-lg"><i class="ph-bold ph-star text-3xl"></i></div>
